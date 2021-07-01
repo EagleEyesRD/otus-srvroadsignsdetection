@@ -9,16 +9,14 @@
 class JSONBase
 {
 public:
-	bool DeserializeFromStr(const std::string& jsontxt);
-	bool DeserializeFromFile(const std::string& filePath);
-	
-	virtual std::string Serialize() const;
-	virtual bool Deserialize(const std::string& s);
-	virtual bool Deserialize(const rapidjson::Document& obj) = 0;
-	virtual bool Serialize(rapidjson::Writer<rapidjson::StringBuffer>* writer) const = 0;
+    bool DeserializeFromStr(const std::string& jsontxt);
+    bool DeserializeFromFile(const std::string& filePath);
+    
+    virtual std::string Serialize() const;
+    virtual bool Deserialize(const std::string& s);
+    virtual bool Deserialize(const rapidjson::Document& obj) = 0;
+    virtual bool Serialize(rapidjson::Writer<rapidjson::StringBuffer>* writer) const = 0;
 protected:
-	bool InitDocument(const std::string& s, rapidjson::Document& doc);
+    bool InitDocument(const std::string& s, rapidjson::Document& doc);
 };
-
-
 

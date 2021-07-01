@@ -8,8 +8,8 @@
 class FrameOptions : public JSONBase
 {
 public:
-	FrameOptions();
-	virtual ~FrameOptions();
+    FrameOptions();
+    virtual ~FrameOptions();
     //bool DeserializeFromStr(const std::string& jsontxt);
     virtual std::string Serialize() const;
     //virtual bool Deserialize(const std::string& s);
@@ -18,9 +18,9 @@ public:
 
 
 public:
-	std::string getPath() const;
-	int getWidth() const;
-	int getHeight() const;
+    std::string getPath() const;
+    int getWidth() const;
+    int getHeight() const;
     //
     std::string getMarkUpShape() const; 
     void setMarkUpShape(std::string);
@@ -37,7 +37,7 @@ public:
     float getpredictedU() const; 
     void setpredictedU(float);
 private:
-	//input fields
+    //input fields
     std::string ShutName;
     std::string FileName;
     int64_t epoch;
@@ -62,7 +62,5 @@ private:
     float predictedShiftY; 
     float predictedU;  
 };
-
-
 
 #endif // FRAME_OPTIONS_HPP
