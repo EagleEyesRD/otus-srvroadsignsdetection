@@ -2,6 +2,18 @@ cmake_minimum_required(VERSION 3.5)
 
 project(srvroadsignsrecognition)
 
+find_path(rabbitmq_INCLUDE_DIR
+  NAMES amqp.h)
+
+find_library(rabbitmq_LIBRARY
+  NAMES rabbitmq)
+
+include(FindPackageHandleStandardArgs)
+
+find_package_handle_standard_args(RabbitMQ DEFAULT_MSG
+  rabbitmq_INCLUDE_DIR
+  rabbitmq_LIBRARY)
+
 include_directories(AMQP SignDetector)
 set(SOURCES JSONBase.cpp FrameOptions.cpp CommandLine.cpp)
 set(HEADER_FILES AMQP/AMQPcpp.h SignDetector/SignDetector.h SignDetector/ImageConverter.h)
