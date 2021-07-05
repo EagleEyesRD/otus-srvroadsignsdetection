@@ -97,10 +97,10 @@ void Analyze(
 }
 
 private:
-ImageConvertor ic;
-std::unique_ptr<SignDetector> detector;
-RMQ::MapSings mp;
-bool _IsShowWin;
-bool _IsRecogSigns;
-FrameOptions fo;
+    ImageConvertor ic;
+    std::unique_ptr<SignDetector> detector;
+    RMQ::MapSings mp;
+    bool _IsShowWin;
+    bool _IsRecogSigns;
+    FrameOptions fo;
 };
