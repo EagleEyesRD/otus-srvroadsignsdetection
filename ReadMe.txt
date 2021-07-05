@@ -20,9 +20,9 @@ vcpkg
 
 install as packets of vcpkg:
 OpenCV( ver.4.5.2)
-RabbitMQ_C
-AMQP
-
+rabbitmq-c
+amqp
+rapidjson
 
  
 
